@@ -18,7 +18,7 @@ public class BottleOfWater extends Product{
         return "BottleOfWater{" +
                 "name" + super.getName() + '\'' +
                 "volume=" + this.volume + '\'' +
-                ", cost=" + super.getPrice() +
+                ", price=" + super.getPrice() +
                 '}';
     }
     @Override
