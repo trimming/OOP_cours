@@ -13,9 +13,9 @@ public class Main {
         System.out.println(vendingMachine);
         
         List<HotDrink> listDrink = new ArrayList<>();
-        listDrink.add(new HotDrink("Coffe", 120, 1, 70);
-        listDrink.add(new HotDrink("Tea", 60, 1, 80);
-        listDrink.add(new HotDrink("Cocoa", 100, 1, 60);
+        listDrink.add(new HotDrink("Coffe", 120, 0.4,70));
+        listDrink.add(new HotDrink("Tea", 60, 0.25, 80));
+        listDrink.add(new HotDrink("Cocoa", 100, 0.5, 60));
         HotDrinksVendingMachine hotDrinksVendingMachine = new HotDrinksVendingMachine(listDrink);
         System.out.println(hotDrinksVendingMachine);
     }

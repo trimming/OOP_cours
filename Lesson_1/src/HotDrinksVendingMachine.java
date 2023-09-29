@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class HotDrinksVendingMachine implements VendingMachine{
     
     List<HotDrink> drinksList;

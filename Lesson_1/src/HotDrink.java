@@ -1,7 +1,7 @@
 public class HotDrink extends BottleOfWater{
     private int temperature;
 
-    public HotDrink(String name, double price, int volume, int temperature) {
+    public HotDrink(String name, double price, double volume, int temperature) {
         super(name, price, volume);
         this.temperature = temperature;
     }
@@ -17,8 +17,8 @@ public class HotDrink extends BottleOfWater{
     @Override
     public String toString() {
         return "HotDrink{" +
-                "name" + super.getName() + '\'' +
-                "volume=" + super.getVolume() + '\'' +
+                "name: " + super.getName() + ", " +
+                "volume=" + super.getVolume() + ", " +
                 "temperature=" + temperature +
                 '}';
     }
