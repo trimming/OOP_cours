@@ -1,6 +1,6 @@
 import java.time.LocalDate;
 
-public class Student extends User {
+public class Student extends User implements Comparable<Student>{
     private Long studentId;
 
     public Student(String firstName, String secondName, String lastName, LocalDate dateOfBirth, Long studentId) {
@@ -25,5 +25,10 @@ public class Student extends User {
                 ", lastName='" + super.getLastName() + '\'' +
                 ", dateOfBirth=" + super.getDateOfBirth() +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Student o) {
+        return this.studentId.compareTo(o.studentId);
     }
 }

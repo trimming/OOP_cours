@@ -3,7 +3,7 @@ import java.util.List;
 
 public class StudentGroupIterator implements Iterator<Student> {
     private int index;
-    private List<Student> studentList;
+    private final List<Student> studentList;
 
     public StudentGroupIterator(List<Student> studentList) {
         this.index = 0;
