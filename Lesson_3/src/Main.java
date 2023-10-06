@@ -37,21 +37,12 @@ public class Main {
         List<StudentGroup> studentGroupList2 = new ArrayList<>(List.of(new StudentGroup[]{studentGroup3}));
         Stream stream2 = new Stream(studentGroupList2);
         
-        StudentGroupIterator sgi = new StudentGroupIterator(studentList);
-//    while (sgi.hasNext()){
-//        System.out.println(sgi.next());
-//    }
-        Collections.sort(studentList, new StudentComparator());
-//        for (Student student : studentList) {
-//            System.out.println(student);
-//        }
-        
-//    for (Student student: studentGroup){
-//        System.out.println(student);
-//    }
-       
-       for (StudentGroup group: stream){
-           System.out.println(group);
+//
+        List<Stream> streamList = new ArrayList<>(List.of(new Stream[]{stream2, stream1}));
+       StreamService streamService = new StreamService(streamList);
+       streamService.getSortedBySizeStream();
+       for (Stream stream: streamList){
+           System.out.println(stream);
        }
     }
 }
