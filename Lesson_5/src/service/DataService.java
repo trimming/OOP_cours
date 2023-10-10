@@ -9,8 +9,8 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DataService <T extends User>{
-    private List<User> userList;
+public class DataService{
+    private final List<User> userList;
 
     public DataService() {
         this.userList = new ArrayList<>();
@@ -63,5 +63,13 @@ public class DataService <T extends User>{
             }
         }
         return resultList;
+    }
+    public User getTeacher(){
+        for(User user: userList){
+            if(user instanceof Teacher){
+                return user;
+            }
+        }
+        return null;
     }
 }
