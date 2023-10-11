@@ -11,7 +11,7 @@ import java.util.List;
 
 public class Controller {
     private  final DataService dataService = new DataService();
-    private final StudentView studentView = new StudentView();
+    private final StudentView<User> studentView = new StudentView<>();
     private  final StudentGroupService studentGroupService = new StudentGroupService();
 
     public void createStudent(String firstName, String secondName,
@@ -24,9 +24,7 @@ public class Controller {
     }
     public void getAll(){
         List<User> userList = dataService.getAll();
-        for(User user: userList){
-            studentView.sendOnConsole(user);
-        }
+        for(User user: userList) studentView.sendOnConsole(user);
     }
 
 
