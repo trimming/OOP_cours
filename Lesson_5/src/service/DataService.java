@@ -53,7 +53,7 @@ public class DataService{
         return null;
     }
     public List<User> getAll(){
-        return userList;
+        return this.userList;
     }
     public List<User> getAllStudents(){
         List<User> resultList = new ArrayList<>();
@@ -64,12 +64,5 @@ public class DataService{
         }
         return resultList;
     }
-    public User getTeacher(){
-        for(User user: userList){
-            if(user instanceof Teacher){
-                return user;
-            }
-        }
-        return null;
-    }
+
 }

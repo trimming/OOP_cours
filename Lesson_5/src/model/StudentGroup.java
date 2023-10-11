@@ -27,7 +27,5 @@ public class StudentGroup {
         return studentList;
     }
 
-    public void setStudentList(List<Student> studentList) {
-        this.studentList = studentList;
-    }
+
 }

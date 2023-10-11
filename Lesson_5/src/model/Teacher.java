@@ -22,7 +22,7 @@ public class Teacher extends User{
     public String toString() {
         return "Teacher{" +
                 "teacherId=" + teacherId +
-                "firstName='" + super.getFirstName() + '\'' +
+                " firstName='" + super.getFirstName() + '\'' +
                 ", secondName='" + super.getSecondName() + '\'' +
                 ", lastName='" + super.getLastName() + '\'' +
                 ", dateOfBirth=" + super.getDateOfBirth() +
