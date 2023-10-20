@@ -1,16 +1,17 @@
 package Calculate;
 
 public class OperationAdd extends OperationDecorator{
-    double number;
+    ComplexNumber number;
 
-    public OperationAdd(InterfaceCalculate calculate, double number) {
+    public OperationAdd(InterfaceCalculate calculate, ComplexNumber number) {
         super(calculate);
         this.number = number;
     }
 
     @Override
-    public double getNumber() {
-        super.getNumber();
-        return this.number + super.getNumber();
+    public ComplexNumber getComplexNumber() {
+        double newReal = this.number.getReal() + super.getComplexNumber().getReal();
+        double newImaginary = this.number.getImaginary() + super.getComplexNumber().getImaginary();
+        return new ComplexNumber(newReal, newImaginary);
     }
 }
