@@ -27,9 +27,15 @@ public class ComplexNumber {
 
     @Override
     public String toString() {
-        return "ComplexNumber{" +
-                "real=" + real +
-                ", imaginary=" + imaginary +
-                '}';
+        if(imaginary == 0) {
+            return "ComplexNumber = " + real;
+        } else if(real == 0){
+            return "ComplexNumber = " + imaginary + "i";
+        }
+        else{
+            return "ComplexNumber = " +
+                    real + " + " +
+                    imaginary + "i";
+        }
     }
 }
